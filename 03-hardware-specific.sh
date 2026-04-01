@@ -25,7 +25,8 @@ AddPackage cups-pdf # PDF printer for cups
 AddPackage nss-mdns # glibc plugin providing host name resolution via mDNS. This is needed for network printers
 AddPackage system-config-printer # A CUPS printer configuration tool and status applet
 
-CopyFile /etc/nsswitch.conf # For local network printer resolution
+# For local network printer resolution
+sed -i 's/^hosts: mymachines resolve \[!UNAVAIL=return\] files myhostname dns/hosts: mymachines mdns_minimal [NOTFOUND=return] resolve [!UNAVAIL=return] files myhostname dns/' "$(GetPackageOriginalFile filesystem /etc/nsswitch.conf)"
 
 CreateLink /etc/systemd/system/multi-user.target.wants/cups.path /usr/lib/systemd/system/cups.path
 CreateLink /etc/systemd/system/multi-user.target.wants/cups.service /usr/lib/systemd/system/cups.service
