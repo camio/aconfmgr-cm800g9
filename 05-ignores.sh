@@ -66,3 +66,14 @@ IgnorePath '/etc/adjtime'
 IgnorePath '/etc/machine-id'
 IgnorePath '/boot/*'
 IgnorePath '/etc/brlapi.key'
+
+# New ignores
+IgnorePackage lm_sensors
+IgnorePath '/etc/conf.d/lm_sensors'
+IgnorePath '/etc/systemd/system/multi-user.target.wants/lm_sensors.service'
+IgnorePath '/etc/systemd/system/sockets.target.wants/polkit-agent-helper.socket'
+IgnorePath '/usr/bin/gemini'
+IgnorePath '/etc/pacman.d'
+IgnorePath '/etc/pacman.d/mirrorlist.pacnew'
+IgnorePath '/var/spool/cups/*'
+IgnorePath '/etc/cups/classes.conf'

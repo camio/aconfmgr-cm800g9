@@ -2,7 +2,10 @@
 AddPackage emacs # The extensible, customizable, self-documenting real-time display editor
 AddPackage firefox # Fast, Private & Safe Web Browser
 AddPackage gvim # Vi Improved, a highly configurable, improved version of the vi text editor (with advanced features, such as a GUI)
+AddPackage --foreign vim-colorschemes # A very large collection of color schemes from vim.org
 AddPackage okular # Document Viewer
+AddPackage hunspell-en_us # US English hunspell dictionaries
+AddPackage nuspell # Fast and safe spellchecking C++ library
 AddPackage pass # The 'pass' command used to get API keys from a file that is password protected. Used for backups.
 AddPackage restic # Used for backups.
 
@@ -20,7 +23,10 @@ AddPackage clang # C language family frontend for LLVM
 AddPackage ninja # Small build system with a focus on speed
 AddPackage hyperfine # A command-line benchmarking tool
 AddPackage git # the fast distributed version control system
+AddPackage tk # A windowing toolkit for use with tcl (needed for git gui)
 AddPackage github-cli # The GitHub CLI
+AddPackage ghc # The Glasgow Haskell Compiler
+AddPackage npm # JavaScript package manager
 
 ## Fonts
 AddPackage gnu-free-fonts # A free family of scalable outline fonts
